@@ -5,7 +5,7 @@ export default function ExpenseForm({ participants, onAddExpense }) {
   const [category, setCategory] = useState("Food");
   const [amount, setAmount] = useState("");
   const [selectedParticipants, setSelectedParticipants] = useState([]);
-  const [paidBy, setPaidBy] = useState(""); // 👈 Paid by participant ID
+  const [paidBy, setPaidBy] = useState(""); //  Paid by participant ID
 
   const toggleParticipant = (id) => {
     setSelectedParticipants((prev) =>
@@ -27,10 +27,10 @@ export default function ExpenseForm({ participants, onAddExpense }) {
       amount: Number(amount),
       paidBy,
       participants: selectedParticipants,
-      share, // optional, if needed on frontend
+      share, 
     });
 
-    // Reset form
+ 
     setDescription("");
     setCategory("Food");
     setAmount("");
@@ -63,7 +63,7 @@ export default function ExpenseForm({ participants, onAddExpense }) {
         />
       </div>
 
-      {/* ✅ Paid By Dropdown */}
+      {/*   Dropdown(Paid By) */}
       <div style={{ marginTop: 10 }}>
         <strong>Paid By: </strong>
         <select value={paidBy} onChange={(e) => setPaidBy(e.target.value)}>
@@ -76,7 +76,7 @@ export default function ExpenseForm({ participants, onAddExpense }) {
         </select>
       </div>
 
-      {/* ✅ Participant Checkboxes */}
+      {/*  Participant Checkboxes */}
       <div style={{ marginTop: 10 }}>
         <strong>Select Participants:</strong>
         {participants.map((p) => (
