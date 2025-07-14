@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "../api"; // ✅ Correct source of api
+import api from "../api"; 
 import { useNavigate } from "react-router-dom";
 
 export default function CreateRoom() {
@@ -11,7 +11,7 @@ export default function CreateRoom() {
     try {
       const res = await api.post("/rooms", { name: roomName });
       setMessage("Room created successfully!");
-      navigate(`/rooms/${res.data._id}`); // Navigate to room detail page
+      navigate(`/rooms/${res.data._id}`);
     } catch (err) {
       setMessage("Failed to create room");
       console.error(err);
