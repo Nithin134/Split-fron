@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import ParticipantsList from "./ParticipantsList";
 import ExpenseForm from "./ExpenseForm";
 import AddParticipants from "./AddParticipants";
-import api from "../api"; // ✅ Correct source of api
+import api from "../api"; 
 
 export default function Rooms() {
   const { roomId } = useParams();
