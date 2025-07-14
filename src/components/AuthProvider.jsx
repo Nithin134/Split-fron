@@ -1,7 +1,7 @@
-// src/components/AuthProvider.jsx
+
 
 import React, { createContext, useContext, useState, useEffect } from "react";
-import api from "../api"; // ✅ import axios instance from shared file
+import api from "../api"; 
 
 const AuthContext = createContext();
 
