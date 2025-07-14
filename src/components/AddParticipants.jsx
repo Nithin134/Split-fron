@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import api from "../api"; // ✅ Correct source of api
+import api from "../api"; 
 
 export default function AddParticipants({ onParticipantsAdded }) {
   const { roomId } = useParams();
@@ -16,7 +16,7 @@ export default function AddParticipants({ onParticipantsAdded }) {
       setMessage("Participants added!");
       setEmailsOrPhones("");
 
-      // ✅ Notify parent to refresh participants
+   
       onParticipantsAdded();
     } catch (err) {
       console.error(err);
