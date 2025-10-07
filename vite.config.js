@@ -1,18 +1,18 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer'
+
+
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-   build: {
+  build: {
     target: 'esnext',
     minify: 'esbuild',
     outDir: 'dist',
     rollupOptions: {
       treeshake: true,
     },
-   },
-  plugins: [react(), visualizer()],
+  },
+  plugins: [react()],
   server: { port: 3000 },
-});
-
-
+})
