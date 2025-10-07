@@ -8,7 +8,9 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       treeshake: true,
-    }
+    },
+   },
   plugins: [react(), visualizer()],
   server: { port: 3000 },
 });
+
